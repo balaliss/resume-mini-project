@@ -1,0 +1,35 @@
+import json
+from typing import Type
+from urllib import response
+
+print('Loading Function')
+
+
+def lambda_handler(event, context)
+
+
+# 1. parse out query string params
+transactionId = event['queryStringParameters']['transactionId']
+transactionType = event['queryStringParameters']['type']
+transactionAmount = event['queryStringParameters']['amount']
+
+print('transactionId=' + transactionId)
+print('transactionType=' + transactionType)
+print('transactionAmount=' + transactionAmount)
+
+# 2. Construct the body of the response object
+transactionRespone = {}
+transactionRespone['transactionId'] = transactionId
+transactionRespone['type'] = transactionType
+transactionRespone['amount'] = transactionAmount
+transactionRespone['message'] = 'Hello from Lambda land'
+
+# 3. Construct http response object
+responseObject = {}
+responseObject['statusCode'] = 200
+responseObject['headers'] {}
+responseObject['headers']['Content-Type'] = 'application/json'
+responseObject['body'] = json.dumps(transactionRespone)
+
+# 4. Return the response object
+return responseObject

@@ -1,0 +1,12 @@
+version = 0.1
+[default]
+[default.deploy]
+[default.deploy.parameters]
+stack_name = "resume-mini-project"
+s3_bucket = "aws-sam-cli-managed-default-samclisourcebucket-r6wh2x1jmw5u"
+s3_prefix = "resume-mini-project"
+region = "us-east-1"
+confirm_changeset = true
+capabilities = "CAPABILITY_IAM"
+disable_rollback = true
+image_repositories = []
