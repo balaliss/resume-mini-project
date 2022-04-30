@@ -12,3 +12,4 @@ if (visitCount) {
 }
 counterContainer.innerHTML = visitCount;
 
+
